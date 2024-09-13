@@ -1,0 +1,10 @@
+<button (click)="onToggleDetails()">Display Details</button>
+
+<p *ngIf="showSecret">Secret Password = tuna</p>
+
+<ul>
+  <li *ngFor="let logItem of log; let i = index"
+      [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'transparent', 'color': i >= 4 ? 'white' : 'black' }">
+    Log {{ i + 1 }}: {{ logItem }}
+  </li>
+</ul>
